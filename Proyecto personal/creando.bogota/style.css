@@ -1,0 +1,335 @@
+/*=================General=======================*/
+body{
+margin: 0;
+padding: 0; 
+}
+.boton-fondo-rosado{
+    width: 40%;
+    min-width: 100px;
+    padding: 10px 10px;
+    background-color: #db8281;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+.icono{
+    width: 40px;
+    height: 40px; 
+    padding: 10px;
+    margin: 10px;
+}
+/*=====================decoracionTexto=====================================*/
+.texto-normal-negro{
+    color:black;
+}
+.texto-cursivo-rosa{
+    color: #E8A7A6;
+}
+.texto-centrado{
+    text-align: center;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+h3{
+    
+    font-size: 35px;
+    margin: 40px;
+}
+h4{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    font-size: 15px;
+    color: rgb(59, 59, 59);
+    margin: 0;
+    padding: 0;
+}
+
+
+/*=====================HEADER=============================*/
+header{
+    font-weight: bolder;
+    background-color: #E8A7A6;
+    display:flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    color:white;
+    
+}
+/*=======================NAV=====================================*/
+nav{
+    padding: 10px 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+   } 
+.espacio-imagen {
+    max-width: 15%;
+    min-width: 150px;
+    height: 20px;
+
+    
+}
+
+#logo-nav{
+    max-width: 100%;
+    
+
+}
+.nav-uls{
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+nav ul{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+nav ul li {
+    list-style: none;
+    padding: 5px;
+    gap:20px;
+  
+}
+
+.opciones-nav-texto{  
+    gap:20px;   
+}
+nav ul li a {
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 3px 10px;
+    transition: all;
+    transition-duration: 0.4s;
+    border:white;
+}
+.opciones-nav-iconos{ 
+    gap:20px;
+    margin-bottom: 0;
+    
+}
+.nav-icono{
+    width: 25px;
+    margin: 0; 
+}
+/*===============ANIMACIONES NAV===============================*/
+nav ul li a:hover{
+    border-bottom: solid 1px  #da9392;
+    color: #da9392;
+}
+
+/*==============================HERO======================*/
+
+.hero{
+    background: url(imagenes-general/reno\ nodificado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 600px;
+    min-height: 100px;
+    
+}
+.overlay{
+    background: linear-gradient(to right, #ffffff,  transparent);
+    width: 100%;
+    height: 100%;
+    
+    align-content: center;
+}
+.texto-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-left: 100px;
+   
+}
+
+.texto-hero p{
+    
+    font-size: 20px;
+}
+
+
+/*==========================MAIN===============================*/
+main{
+    margin: 5%;
+   
+}
+/*==================BENEFICIOS=================*/
+.beneficios-pagina{
+    display: flex;
+    align-items: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+hr{
+    margin: 10px;
+}
+.item-beneficios-pagina{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 200px;
+
+}
+
+.icono-beneficios-pagina{
+    width: 25px;
+    height: 25px; 
+    padding: 10px;
+    margin: 10px;
+    border: 3px rgb(122, 122, 122) solid;
+    border-radius: 30%; 
+}
+/*==================CATEGORIAS=================*/
+.categorias-contenedor{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:15px
+}
+.categoria-item{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+    border: rgb(201, 201, 201) solid 1px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px 0px rgba(83, 83, 83, 0.226);
+}
+.categoria-item button{
+    color:#e08583;
+    background-color: transparent;
+    border: 1px #bb8c8b solid;
+    border-radius: 15px;
+    padding: 5px 20px;
+}
+/*=======================NUEVO CX=======================================*/
+.cx-nuevo{
+    margin: 50px 0;
+    padding: 50px 5%;
+    background-color: #ffcac9;
+    min-width: 250px;
+    display: flex;
+    border-color: none;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.texto-bienvenida{
+    width: 20%;
+    min-width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.opciones-nuevo-cx{
+    width: 80%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-grow: 4;
+    flex-wrap: wrap;
+}
+.opciones-nuevo-cx div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    border-left: rgb(255, 173, 180) 3px solid;
+    padding: 0 20px;
+    
+}
+
+.cx-nuevo p{
+    font-size: 20px;
+}
+
+/*=========================Slider================================*/
+ /* 1. Contenedor Principal */
+    .slider-wrapper {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    /* 2. Ocultar los botones de selección nativos */
+    .slider-wrapper input[type="radio"] {
+      display: none;
+    }
+
+    /* 3. Tira del Slider (Flexbox) */
+    .slides-container {
+      display: flex;
+      width: 300%; /* 100% por cada una de las 3 imágenes */
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides-container img {
+      width: 33.333%; /* Cada imagen ocupa un tercio del contenedor */
+      object-fit: cover;
+      height: 350px;
+    }
+
+    /* 4. Lógica de movimiento con CSS */
+    #slide1:checked ~ .slides-container { transform: translateX(0); }
+    #slide2:checked ~ .slides-container { transform: translateX(-33.333%); }
+    #slide3:checked ~ .slides-container { transform: translateX(-66.666%); }
+
+    /* 5. Contenedor de los botones de control (Puntos inferiores) */
+    .slider-nav {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Estilo visual de los puntos */
+    .nav-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Cambiar el color del punto activo según la imagen seleccionada */
+    #slide1:checked ~ .slider-nav .btn1,
+    #slide2:checked ~ .slider-nav .btn2,
+    #slide3:checked ~ .slider-nav .btn3 {
+      background-color: #ffffff;
+      transform: scale(1.2);
+    }
