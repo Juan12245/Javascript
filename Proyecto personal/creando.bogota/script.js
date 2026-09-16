@@ -1,3 +1,5 @@
+
+
 // ====================PRODUCTOS===============================
 const productos=[
     {
@@ -117,6 +119,7 @@ const actualizarCarrito =()=>{
         productosEnCarrito.appendChild(divProducto)
     })
 agregarEventosCarrito ()
+actualizarTotal()
 }
 
 
@@ -147,7 +150,6 @@ const agregarAlCarrito = (id) =>{
             carrito.push({...producto, 
                 cantidad:1})
                  }
-                 actualizarTotal()
                  actualizarCarrito ()
        
 }
