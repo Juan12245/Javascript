@@ -2,16 +2,14 @@ const User = require (`../models/User`)
 
 const registrar = async (request, response) =>{
     try{
-     const nombre= request.body.nombre
-     const email= request.body.email
-     const password= request.body.password
+     const {nombre, email, password} = request.body;
      
      let user =await User.findOne ({email: email})
-     if (user) return response.status(400).json ({msg: `usuario ya creado`})
+     if (user) response.status(400).json ({msg: `usuario ya creado`})
      
      user = new User ({
         nombre: nombre,
-        email: email,
+        email: email,    
         password: password
     }) 
 
@@ -25,4 +23,22 @@ const registrar = async (request, response) =>{
     
 }
 
-module.exports = registrar
+
+const login = async (request, response) =>{
+    try
+    {
+        const {email, password} = request.body;
+        let user= await User.findOne({email})
+
+        if (!user) { return response.status(400).json ({msg:`usuario no existente`})}
+
+        const passwordMatch= password === user.password;
+        if(!passwordMatch){ return response.status(400).json ({msg: `contraseña incorrecta`})}
+
+        return response.status(200).json({msg:`sesion iniciada exitosamente`})
+
+    } catch(error){
+        return response.status(500).json({error: `error al conectar con el usuario: ${error.message}`})
+    }
+}
+module.exports = {registrar, login}
