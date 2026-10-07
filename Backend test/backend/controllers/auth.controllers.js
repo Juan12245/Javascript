@@ -44,10 +44,11 @@ const login = async (request, response) =>{
             process.env.SECRET_KEY,
             {expiresIn:`1h`}
         )
-        return response.status(200).json({token})
+        return response.status(200).json({msg:`usuario logueado exitosamente`})
 
     } catch(error){
         return response.status(500).json({error: `error al conectar con el usuario: ${error.message}`})
     }
 }
+
 module.exports = {registrar, login}

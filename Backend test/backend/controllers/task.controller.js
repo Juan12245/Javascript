@@ -1,5 +1,5 @@
 
-const task = require("../models/task")
+
 const Task = require(`../models/task`)
 
 
@@ -44,7 +44,13 @@ const traerTareaPorId = async (request, response)=>{
       const task = await Task.findOne({
         _id:request.params.id,
         user:request.user.id})
-      return response.status(200).json(task)
+
+        if (task == null){
+          return response.status(404).json(`Tarea no encontrada`)
+        }
+
+       else {return response.status(200).json(task)}
+      
     }
     catch(error)
     { response.status(400).json(`error trayendo tarea: ${ error.message }`)

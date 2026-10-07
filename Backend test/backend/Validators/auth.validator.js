@@ -1,4 +1,5 @@
 const {body} = require (`express-validator`);
+const passwordValidator = require (`password-validator`)
 
 const registerValidator = [
     body(`nombre`)
@@ -12,7 +13,7 @@ const registerValidator = [
     
     body(`password`)
     .notEmpty().withMessage(`La contraseña es obligatoria`)
-    .isStrongPassword().withMessage(`La contraseña debe tener al menos 6 caracteres`)
+    .isStrongPassword().withMessage(`la contraseña debe ser  valida`)
 ];
 
 const loginValidator = [
