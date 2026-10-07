@@ -1,0 +1,10 @@
+const express = require (`express`)
+const router = express.Router()
+const {crearTarea, traerTareas, traerTareaPorId, actualizarTareas, eliminarTarea} =require (`../controllers/task.controller`)
+const validarToken = require (`../middlewares/auth.middlewares`)
+router.post(`/`, validarToken,   crearTarea)
+router.get(`/`, validarToken,   traerTareas)
+router.get(`/:id`, validarToken,   traerTareaPorId)
+router.put(`/:id`, validarToken,   actualizarTareas)
+router.delete(`/:id`, validarToken,   eliminarTarea)
+module.exports = router; 

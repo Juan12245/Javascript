@@ -1,4 +1,7 @@
 const User = require (`../models/User`)
+const bcrypt = require(`bcrypt`)
+const jwt = require (`jsonwebtoken`)
+
 
 const registrar = async (request, response) =>{
     try{
@@ -7,10 +10,12 @@ const registrar = async (request, response) =>{
      let user =await User.findOne ({email: email})
      if (user) response.status(400).json ({msg: `usuario ya creado`})
      
+    const hashedpassword = await bcrypt.hash(password, 10)
+
      user = new User ({
         nombre: nombre,
         email: email,    
-        password: password
+        password: hashedpassword
     }) 
 
      await user.save()
@@ -23,19 +28,23 @@ const registrar = async (request, response) =>{
     
 }
 
-
 const login = async (request, response) =>{
     try
     {
         const {email, password} = request.body;
-        let user= await User.findOne({email})
+        const user= await User.findOne({email})
 
-        if (!user) { return response.status(400).json ({msg:`usuario no existente`})}
+        if (!user) { return response.status(404).json ({msg:`usuario no existente`})}
 
-        const passwordMatch= password === user.password;
+        const passwordMatch= await bcrypt.compare(password, user.password)
         if(!passwordMatch){ return response.status(400).json ({msg: `contraseña incorrecta`})}
 
-        return response.status(200).json({msg:`sesion iniciada exitosamente`})
+        const token = jwt.sign({
+            id: user._id},
+            process.env.SECRET_KEY,
+            {expiresIn:`1h`}
+        )
+        return response.status(200).json({token})
 
     } catch(error){
         return response.status(500).json({error: `error al conectar con el usuario: ${error.message}`})
