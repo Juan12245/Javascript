@@ -1,5 +1,42 @@
 
 
+//=====================LOGUEAR USUARIO=====================
+const btnLogin = document.getElementById (`btn-Login`)
+const dialogLogin = document.getElementById (`dialog-login`)
+let nombre = document.getElementById(`nombre`)
+let email = document.getElementById(`email`)
+let password = document.getElementById(`password`)
+
+btnLogin.addEventListener("click",()=>
+{
+    if(!dialogLogin.open)
+        {
+    dialogLogin.showModal();}
+
+else
+{
+    dialogLogin.close();
+}
+})
+
+
+//=====================REGISTRAR USUARIO=====================
+const btnRegister = document.getElementById (`btn-register`)
+const dialogRegister = document.getElementById (`dialog-register`)
+
+btnRegister.addEventListener("click",()=>
+{
+    if(!dialogRegister.open)
+        {
+    dialogRegister.showModal();}
+
+else
+{
+    dialogRegister.close();
+}
+})
+
+
 // ====================PRODUCTOS===============================
 const productos=[
     {

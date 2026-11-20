@@ -1,0 +1,33 @@
+ <link rel="stylesheet" href="register.css">
+<form action="/submit" method="post"
+[formGroup]="form"
+(ngSubmit)="registrar()">
+    
+<fieldset id="register">
+ <h3>Bienvenido! Crea tu cuenta</h3>
+<div class="register-info">
+    <label for="user">Correo:</label>
+<input type="email" 
+    id="email"
+    placeholder="correo"
+    formControlName="email">
+</div>
+<div class="register-info">
+    <label for="user">Nombre:</label>
+<input type="text"  
+    id="user" 
+    placeholder="nombre"
+    formControlName="name"> 
+</div>
+<div class="register-info">
+<label for="password">Contraseña:</label>
+<input type="text" 
+    id="password" 
+    placeholder="contraseña"
+    formControlName="password">
+</div>
+<button type="submit" class=" login-info boton-fondo-rosado">Crear cuenta</button>
+</fieldset>
+
+
+</form>

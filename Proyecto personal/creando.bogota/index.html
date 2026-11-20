@@ -20,39 +20,82 @@
         </header>
     <!--=============================NAV================================================-->
         
-     <nav class="navbar Menu navbar-expand-lg bg-body-tertiary fw-bold">
-  <div class="container-fluid">
-    <img class="navbar-brand fs-2 ms-3" id="logo-nav" src="Logo creando.bogota/logo creando.bogota png.png">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav d-flex justify-content-between">
-        <li class="nav-item">
-          <a class="nav-link" href="#">INICIO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MOLDES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MUÑECOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">KITS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ACCESORIOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">TUTORIALES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">CONTACTO</a>
-        </li>
+<nav class="navbar Menu navbar-expand-lg bg-body-tertiary fw-bold sticky-top">
+  <div class="container-fluid mx-1 align-items-center">
+
+        <img class="m-1" id="logo-nav" src="Logo creando.bogota/logo creando.bogota png.png">
+
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNavDropdown">
+           
+
+            <ul class="navbar-nav justify-content-evenly align-items-center">
+
+                <li class="d-flex gap-3">
+
+                    <button id="btn-Login" class="boton-login-register">Ingresar 
+                        <dialog id="dialog-login">     
+                            <form id="ventana-modal-login">
+                                <fieldset id="fieldset-login"><legend>Ingresar</legend>
+                                    <label for="login-email">email: </label><input type="text" id="login-email" placeholder="email">
+                                    <label for="login-contraseña">contraseña: </label><input type="password" id="login-contraseña" placeholder="contraseña">
+                                    <input type="button" value="Enviar" class="boton-fondo-rosado"> 
+                                </fieldset>
+                                </form>
+                        </dialog>
+                    </button>
+             
+                    <button id="btn-register" class="boton-login-register">Registrate 
+                        <dialog id="dialog-register">     
+                            <form id="ventana-modal-register">
+                                <fieldset id="fieldset-register"><legend>crea un perfil</legend> 
+                                    <label for="register-nombre">Nombre: </label><input type="text" id="register-nombre" placeholder="Nombre">
+                                    <label for="register-email">email: </label><input type="text" id="register-email" placeholder="email">
+                                    <label for="register-contraseña">contraseña: </label><input type="password" id="register-contraseña" placeholder="contraseña">
+                                    <input type="button" value="Enviar" class="boton-fondo-rosado"> 
+                                </fieldset>
+                                </form>
+                        </dialog>
+                    </button>
+                </li>
+
+
+                <li class="nav-item">
+                <a class="nav-link" href="#">INICIO</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">MOLDES</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">MUÑECOS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">KITS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">ACCESORIOS</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">TUTORIALES</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">CONTACTO</a>
+                </li>
+                
+                 <li>
+                <a href="#carrito-temporal"><img src="iconos/carrito.png" alt="carrito"></a>
+            </li>
         
-      </ul>
+            </ul>
+        </div>
+  
+
+    
     </div>
-  </div>
 </nav>
 
 
@@ -205,7 +248,7 @@
         <h4>Items agregados a tu carrito</h4>
         <hr>
                 
-            <section class="carrito-temporal">
+            <section id="carrito-temporal">
                 <div id="carrito-vacio">
                 <h3 class="texto-centrado">Tu carrito esta vacio</h3>
                 <img class="img-carrito-vacio" src="iconos/carrito-vacio.png" alt="Carrito vacio">

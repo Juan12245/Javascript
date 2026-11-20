@@ -1,0 +1,36 @@
+h3{
+    text-align: center;
+}
+#register {
+     height: 500px;
+    width:20%;
+    padding: 2px 30px;
+    margin: auto;
+    margin-top: 20px;
+     justify-content: space-evenly;
+    display:flex ;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    border: 2px black solid;
+    box-shadow: 5px 10px 20px rgb(27, 27, 27, 0.5);
+  
+}
+.register-info{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+
+}
+button{
+    cursor: pointer;
+}
+.boton-fondo-rosado{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #db8281;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+}

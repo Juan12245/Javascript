@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*=================General=======================*/
+*{
+margin: 0;
+padding: 0; 
+box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+.boton-fondo-rosado{
+    width: 40%;
+    min-width: 100px;
+    padding: 10px 10px;
+    background-color: #db8281;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+.icono{
+    width: 50px;
+    height: 50px; 
+    padding: 10px;
+    margin: 10px;
+}
+
+ .div-padre-horizontal-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;}
+
+/*=====================decoracionTexto=====================================*/
+.texto-normal-negro{
+    color:black;
+}
+.texto-cursivo-rosa{
+    color: #E8A7A6;
+}
+.texto-centrado{
+    text-align: center;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+h3{
+    
+    font-size: 35px;
+    margin-top:50px !important; 
+}
+h4{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+h5{
+    font-size: 15px;
+    color: rgb(59, 59, 59);
+    margin: 0px;
+    padding: 0;
+}
+
+
+/*=====================HEADER=============================*/
+header{
+    font-weight: bolder;
+    background-color: #e8a7a6;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color:white;}
+    
+    
+    #logo-nav{
+     width: 5%;
+    min-width:100px;
+}
+.boton-login-register{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffd4d4;
+}
+
+.navbar-nav{
+    
+    width: 90%;
+    gap:5px}
+
+nav img{
+cursor:pointer;
+width: 35px;
+}
+
+
+#dialog-login,  #dialog-register{
+
+    padding: 20px;
+    position:fixed;
+   
+    left:100px;
+    top:150px;
+    border: none;
+    border-radius: 8px;
+}
+form {
+    border: none;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border:none;
+    gap:10px
+}
